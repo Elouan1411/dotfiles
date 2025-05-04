@@ -26,3 +26,8 @@ starship init fish | source
 # -- VAR ENV --
 set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 set TERM "xterm-256color"
+
+
+
+
+set --universal nvm_default_version v23.11.0

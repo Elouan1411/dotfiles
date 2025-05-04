@@ -10,6 +10,8 @@ alias .5='cd ../../../../..'
 # -- NVIM --
 
 alias vim='nvim'
+alias vimo='kitty --detach fish -i -c "cd (pwd); vim ."'
+
 
 # -- LS --
 
