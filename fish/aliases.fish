@@ -9,7 +9,7 @@ alias .5='cd ../../../../..'
 
 # -- NVIM --
 
-alias vim='nvim'
+alias vim='nvim .'
 
 
 # -- LS --
@@ -64,3 +64,13 @@ alias intellij="/opt/intellij/bin/idea.sh"
 alias vpnDownNoopy="sudo wg-quick down freebox"
 alias vpnUpNoopy="sudo wg-quick up freebox"
 alias pick-color='gcolor3'
+
+
+# -- SHORTCUT DIRECTORIES --
+alias web='cd ~/Documents/WEB3/docker-php/app/'
+alias oprog='cd ~/Documents/OPROG'
+alias algo='cd ~/Documents/ALGO2'
+alias amsi='cd ~/Documents/AMSI'
+alias cmi='cd ~/Documents/CMI/2e_annee'
+alias introrech='cd ~/Documents/INTRO_RECHERCHE'
+alias publiscie='cd ~/Documents/publi_scientifique'
