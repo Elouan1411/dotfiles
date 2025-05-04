@@ -22,3 +22,4 @@ vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv'", opts)
 vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
 vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
+vim.api.nvim_set_keymap("n", "<leader>ay", "ggVG<leader>y", opts) -- clear highlights

@@ -10,7 +10,8 @@ alias .5='cd ../../../../..'
 # -- NVIM --
 
 alias vim='nvim .'
-
+alias vimconf='nvim ~/.config/nvim/'
+alias fishconf='nvim ~/.config/fish/'
 
 # -- LS --
 
