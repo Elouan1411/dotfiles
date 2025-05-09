@@ -9,9 +9,9 @@ alias .5='cd ../../../../..'
 
 # -- NVIM --
 
-alias vim='nvim .'
-alias vimconf='nvim ~/.config/nvim/'
-alias fishconf='nvim ~/.config/fish/'
+alias vim='nvim'
+alias vimconf='cd ~/.config/nvim/ && nvim .'
+alias fishconf='cd ~/.config/fish/ && nvim .'
 
 # -- LS --
 
@@ -75,3 +75,7 @@ alias amsi='cd ~/Documents/AMSI'
 alias cmi='cd ~/Documents/CMI/2e_annee'
 alias introrech='cd ~/Documents/INTRO_RECHERCHE'
 alias publiscie='cd ~/Documents/publi_scientifique'
+
+
+# -- SIMPLIFY --
+alias python='python3'

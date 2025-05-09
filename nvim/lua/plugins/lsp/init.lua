@@ -9,7 +9,7 @@ return {
 			{ "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
 			{ "antosha417/nvim-lsp-file-operations", config = true },
 			{ "j-hui/fidget.nvim", opts = {} },
-			{ "mrcjkb/rustaceanvim", version = "^4", lazy = false },
+			{ "mrcjkb/rustaceanvim", version = "^6", lazy = false },
 		},
 		config = function()
 			local capabilities = vim.tbl_deep_extend(

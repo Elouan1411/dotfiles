@@ -17,7 +17,16 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
 				python = { "black" },
-				c = { "clang-format" },
+				c = { "custom_clang_format" },
+			},
+			formatters = {
+				custom_clang_format = {
+					command = "clang-format",
+					args = {
+						"--style=file:" .. vim.fn.expand("~/.config/clang-format/.clang-format"),
+					},
+					stdin = true,
+				},
 			},
 			format_on_save = format_options,
 		})

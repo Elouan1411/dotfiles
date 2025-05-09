@@ -22,4 +22,11 @@ vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv'", opts)
 vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
 vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
-vim.api.nvim_set_keymap("n", "<leader>ay", "ggVG<leader>y", opts) -- clear highlights
+-- Copie tout le texte dans le registre "+ (presse-papiers système)
+vim.api.nvim_set_keymap("n", "<leader>ay", 'ggVG"', { noremap = true, silent = true }) -- copie tout dans le presse-papiers
+
+-- Remplace tout le texte par ce qui est dans le presse-papiers système
+vim.api.nvim_set_keymap("n", "<leader>ap", 'ggVGd"+P', { noremap = true, silent = true }) -- remplace tout avec le presse-papiers
+
+-- Sélectionne tout le texte
+vim.api.nvim_set_keymap("n", "<leader>a", "ggVG", { noremap = true, silent = true }) -- sélectionne tout

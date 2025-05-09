@@ -11,15 +11,30 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
-vim.opt.scrolloff = 999 -- curseur toujours au milieu de l'ecran
-
+-- -- Centrage permanent par défaut
+-- vim.opt.scrolloff = 999
+--
+-- -- Désactive le centrage en mode insert (plus intuitif pour la saisie)
+-- vim.api.nvim_create_autocmd("InsertEnter", {
+-- 	callback = function()
+-- 		vim.opt.scrolloff = 0
+-- 	end,
+-- })
+--
+-- -- Réactive le centrage en quittant le mode insert
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+-- 	callback = function()
+-- 		vim.opt.scrolloff = 999
+-- 	end,
+-- })
+--
 -- on s'est pas ca fait quoi
 vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
 
 vim.opt.ignorecase = true -- ctrl + F -> ignoré la casse
 
-vim.opt.termguicolors = true -- pour que le theme marche bien 
+vim.opt.termguicolors = true -- pour que le theme marche bien
 
 -- touche principal (espace)
 vim.g.mapleader = " "

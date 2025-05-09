@@ -2,6 +2,6 @@
 function dupvim
     # Find the Git root or use current dir
     set root (git rev-parse --show-toplevel ^/dev/null 2>/dev/null; or pwd)
-    kitty --detach fish -i -c "cd '$root'; vim"
+    kitty --detach fish -i -c "cd '$root'; nvim ."
 end
 
