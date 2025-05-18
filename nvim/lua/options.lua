@@ -4,7 +4,11 @@ vim.opt.relativenumber = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true -- split fenetre plus logique
 
-vim.opt.wrap = true -- retour à la ligne quand ca prend tout l'ecran
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.showbreak = "↪ "
+vim.opt.breakat = " \t!@*-+;:,./?"
 
 -- gestion des tabulations
 vim.opt.expandtab = true

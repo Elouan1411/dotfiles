@@ -19,10 +19,27 @@ autocmd("BufWritePre", {
 	command = [[%s/\s+$//e]],
 })
 
-autocmd("CursorHold", {
-	group = "elouan",
+-- autocmd("CursorHold", {
+-- 	group = "elouan",
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.schedule(vim.diagnostic.open_float)
+-- 	end,
+-- })
+
+vim.o.updatetime = 300
+
+vim.api.nvim_create_autocmd("CursorHold", {
+	group = vim.api.nvim_create_augroup("elouan", { clear = true }),
 	pattern = "*",
 	callback = function()
-		vim.schedule(vim.diagnostic.open_float)
+		vim.diagnostic.open_float(nil, {
+			focusable = false,
+			close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+			border = "rounded",
+			source = "always",
+			prefix = "",
+			scope = "cursor",
+		})
 	end,
 })

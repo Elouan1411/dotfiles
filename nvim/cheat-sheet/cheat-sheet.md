@@ -1,22 +1,23 @@
 # 🧠 **Manipulations de base (copier-coller)**
 | Action                          | Raccourci              | Explication                                      |
-|---------------------------------|-------------------------|--------------------------------------------------|
-| Copier vers presse-papier OS    | `"+y`                   | Copie dans le presse-papier système (nécessite `+clipboard`) |
-| Coller depuis l’extérieur       | `Ctrl+Shift+V` (terminal) | Colle dans Vim depuis le presse-papier          |
-| Copier                         | `y`                     | Copy normal (en fonction du mouvement)           |
-| Copier une ligne               | `yy` ou `Y`             | Copie la ligne entière                          |
-| Coller après                   | `p`                     | Colle après le curseur                          |
-| Coller avant                   | `P`                     | Colle avant le curseur                          |
+|---------------------------------|------------------------|--------------------------------------------------|
+| Copier vers presse-papier OS    | `<leader>y`            | Copie dans le presse-papier système              |
+| Coller depuis l’extérieur       | `<leader>v`            | Colle dans Vim depuis le presse-papier           |
+| Copier                          | `y`                    | Copy normal (en fonction du mouvement)           |
+| Copier une ligne                | `yy` ou `Y`            | Copie la ligne entière                           |
+| Coller après                    | `p`                    | Colle après le curseur                           |
+| Coller avant                    | `P`                    | Colle avant le curseur                           |
 
 ---
 
 # 📂 **Fichiers et navigation (plugins type Telescope/NvimTree)**
 | Action                     | Raccourci       | Explication                               |
 |----------------------------|------------------|-------------------------------------------|
-| Ouvrir gestionnaire fichiers | `<Space>pv`      | Ouvre l’arborescence de fichiers (type NvimTree) |
+| Ouvrir gestionnaire fichiers | `<Space>pv`      | Ouvre l’arborescence de fichiers (oil) |
 | Reculer d’un dossier        | `-`              | Quand tu es dans l’explorateur             |
 | Voir fichiers cachés       | `g.`             | Affiche/masque les fichiers cachés         |
 | Recherche de fichier       | `<Space>pf`      | Finder-like avec Telescope                 |
+| CTRL + F dans projet       | `<Space>sg`      | Finder-word avec Telescope                 |
 
 ---
 
@@ -69,7 +70,10 @@
 | `?mot`           | Recherche vers le **haut**                  |
 | `n`              | Prochaine occurence                         |
 | `N`              | Occurence précédente                        |
-| `:noh`           | Enlève la surbrillance                     |
+| `echap`          | Enlève la surbrillance                      |
+| `<leader>dn`     | Va juste à la prochaine erreur              |
+| `<leader>dp`     | Va juste à l'erreur précedente              |
+| `<leader>e`      | Affiche l'erreur                            |
 
 ---
 

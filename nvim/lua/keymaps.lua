@@ -30,3 +30,9 @@ vim.api.nvim_set_keymap("n", "<leader>ap", 'ggVGd"+P', { noremap = true, silent 
 
 -- Sélectionne tout le texte
 vim.api.nvim_set_keymap("n", "<leader>a", "ggVG", { noremap = true, silent = true }) -- sélectionne tout
+
+vim.api.nvim_set_keymap("v", "<leader>v", [["+p]], opts) -- remplace la sélection visuelle
+vim.api.nvim_set_keymap("n", "<leader>v", [["+p]], opts) -- colle le press papiers
+
+-- voir erreur
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
