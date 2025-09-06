@@ -43,3 +43,13 @@ vim.api.nvim_create_autocmd("CursorHold", {
 		})
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+	pattern = "*.pdf",
+	callback = function()
+		-- Utilise 'open' sur macOS, sinon 'xdg-open' pour Linux
+		vim.fn.jobstart({ "open", vim.fn.expand("%:p") }, { detach = true })
+		-- Optionnel : ferme automatiquement le buffer dans Neovim après ouverture
+		vim.cmd("bd!")
+	end,
+})

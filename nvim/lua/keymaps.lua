@@ -23,10 +23,8 @@ vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
 vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
 -- Copie tout le texte dans le registre "+ (presse-papiers système)
-vim.api.nvim_set_keymap("n", "<leader>ay", 'ggVG"', { noremap = true, silent = true }) -- copie tout dans le presse-papiers
 
 -- Remplace tout le texte par ce qui est dans le presse-papiers système
-vim.api.nvim_set_keymap("n", "<leader>ap", 'ggVGd"+P', { noremap = true, silent = true }) -- remplace tout avec le presse-papiers
 
 -- Sélectionne tout le texte
 vim.api.nvim_set_keymap("n", "<leader>a", "ggVG", { noremap = true, silent = true }) -- sélectionne tout
@@ -36,3 +34,6 @@ vim.api.nvim_set_keymap("n", "<leader>v", [["+p]], opts) -- colle le press papie
 
 -- voir erreur
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+
+-- ctrl + s pour sauvegarder
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc>:w<CR>", { noremap = true, silent = true })

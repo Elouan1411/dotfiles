@@ -30,6 +30,7 @@ local plugins = {
 	require("plugins.git"),
 	require("plugins.format"),
 	require("plugins.copilot"),
+	require("plugins.conjure"),
 	-- require("plugins.trouble")
 }
 
