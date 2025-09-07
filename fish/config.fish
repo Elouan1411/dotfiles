@@ -21,7 +21,13 @@ source $HOME/.config/fish/aliases.fish
 starship init fish | source
 
 # -- AUTO START --
-# neofetch
+
+# Launch the interactive tmux menu if tmux is installed and not already inside tmux
+if type -q tmux
+    if not set -q TMUX
+        source ~/.config/fish/tmux_menu.fish
+    end
+end
 
 # -- VAR ENV --
 set -U fish_user_paths $HOME/.local/bin $fish_user_paths

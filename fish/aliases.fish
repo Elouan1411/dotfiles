@@ -9,9 +9,10 @@ alias .5='cd ../../../../..'
 
 # -- NVIM --
 
-alias vim='nvim'
-alias vimconf='cd ~/.config/nvim/ && nvim .'
-alias fishconf='cd ~/.config/fish/ && nvim .'
+# alias vim='nvim'
+# alias vim="neovide >/dev/null 2>&1 & disown"
+alias vimconf='cd ~/.config/nvim/ && vim .'
+alias fishconf='cd ~/.config/fish/ && vim .'
 
 # -- LS --
 
@@ -27,7 +28,7 @@ alias l.='eza -a | grep -E "^."'
 
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
+# alias rm='rm -i'
 
 # -- PS --
 
