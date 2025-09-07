@@ -19,16 +19,43 @@ return {
 				require("cmp_nvim_lsp").default_capabilities()
 			)
 
-			require("mason").setup({
-				"ts_ls",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"lua-language-server",
-				"emmet_ls",
-				"jsonls",
-				"javals",
+			-- Setup mason
+			require("mason").setup()
+
+			-- Setup mason-lspconfig
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"ts_ls",
+					"html",
+					"cssls",
+					"tailwindcss",
+					"lua_ls", -- Changed from lua-language-server to match lspconfig server name
+					"emmet_ls",
+					"jsonls",
+					"jdtls", -- Changed from javals to match lspconfig server name
+					"intelephense",
+				},
+				handlers = {
+					-- Default handler for all servers
+					function(server_name)
+						require("lspconfig")[server_name].setup({
+							capabilities = capabilities,
+						})
+					end,
+					-- Custom handlers for specific servers
+					["lua_ls"] = function()
+						require("lspconfig").lua_ls.setup(require("plugins.lsp.servers.lua_ls").setup(capabilities))
+					end,
+					["jsonls"] = function()
+						require("lspconfig").jsonls.setup(require("plugins.lsp.servers.jsonls").setup(capabilities))
+					end,
+					["cssls"] = function()
+						require("lspconfig").cssls.setup(require("plugins.lsp.servers.cssls").setup(capabilities))
+					end,
+				},
 			})
+
+			-- Setup mason-tool-installer
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"prettier",
@@ -40,15 +67,7 @@ return {
 				},
 			})
 
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({ capabilities = capabilities })
-				end,
-				["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
-				["jsonls"] = require("plugins.lsp.servers.jsonls").setup(capabilities),
-				["cssls"] = require("plugins.lsp.servers.cssls").setup(capabilities),
-			})
-
+			-- LspAttach autocommand for keymaps
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 				callback = function()
@@ -69,6 +88,7 @@ return {
 				end,
 			})
 
+			-- Load snippets
 			require("plugins.lsp.snippets.all")
 			require("plugins.lsp.snippets.bash")
 		end,
