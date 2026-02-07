@@ -30,8 +30,8 @@ local plugins = {
 	require("plugins.git"),
 	require("plugins.format"),
 	require("plugins.copilot"),
-	require("plugins.conjure"),
-	-- require("plugins.trouble")
+	-- require("plugins.conjure"),
+	-- require("lua.plugins.blankline"),
 }
 
 require("lazy").setup(plugins)
