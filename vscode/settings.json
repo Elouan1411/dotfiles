@@ -1,0 +1,218 @@
+{
+    // ========================================================================
+    // 1. GENERAL EDITOR AND INTERFACE CONFIGURATION
+    // ========================================================================
+    
+    // Themes and UI
+    "workbench.colorTheme": "The Best Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    
+    // Text Editor
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "gutter", // Highlighting of the number next to the selected line
+    "editor.smoothScrolling": true,
+    "editor.guides.bracketPairs": "active", // Option that creates the colored line to see the current scope
+    "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    
+    // Minimap
+    //"editor.minimap.enabled": false
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.size": "fill",
+    
+    // Files, Diff and Security
+    "files.autoGuessEncoding": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "security.allowedUNCHosts": ["Freebox_Server"],
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+
+    // ========================================================================
+    // 2. GIT CONFIGURATION (NATIVE)
+    // ========================================================================
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "always",
+
+    // ========================================================================
+    // 3. LANGUAGE-SPECIFIC SETTINGS
+    // ========================================================================
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true,
+        "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0, BinPackParameters: true, AllowShortLoopsOnASingleLine: true, AllowShortFunctionsOnASingleLine: All, BraceWrapping: { AfterFunction: false, AfterControlStatement: false } }"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.wordWrap": "on"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.defaultFormatter": "lenagain.latexindent"
+        // "latex-workshop.latexindent.enabled": false,
+    },
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+
+    // ========================================================================
+    // 4. COMMON EXTENSIONS / GLOBAL TOOLS
+    // ========================================================================
+    
+    // Prettier
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 160,
+    
+    // GitHub Copilot
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.advanced": {
+        "enable": false,
+        "chat.enable": true
+    },
+    
+    // Todo Tree
+    "todo-tree.general.tags": ["TODO", "FIXME", "README", "REF", "WARN"],
+    "todo-tree.tree.autoRefresh": true,
+    "todo-tree.highlights.useColourScheme": false,
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "foreground": "#ffffff",
+            "background": "#a7a7a7",
+            "gutterIcon": true
+        },
+        "README": {
+            "foreground": "#ffffff",
+            "background": "#648843",
+            "iconColour": "#122B3A",
+            "icon": "eye",
+            "gutterIcon": true
+        },
+        "FIXME": {
+            "gutterIcon": true,
+            "foreground": "#ffffff",
+            "background": "#ff0000"
+        }
+    },
+    
+    // GitLens
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    
+    // Vim
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.useSystemClipboard": true,
+    
+    // cSpell (Spell Checker)
+    "cSpell.language": "en,fr",
+
+    // ========================================================================
+    // 5. SPECIFIC EXTENSIONS (C/C++, Python, LaTeX, etc.)
+    // ========================================================================
+    
+    // C / C++ / CMake / Makefile
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "cmake.showOptionsMovedNotification": false,
+    "makefile.configureOnOpen": false,
+    
+    // Python & Jupyter
+    "python.defaultInterpreterPath": "/home/elouan/Documents/actual/apprentissage_auto",
+    "python.createEnvironment.trigger": "off",
+    "black-formatter.args": ["--line-length", "105"],
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    
+    // LaTeX Workshop
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Compile with texcompiler",
+            "tools": ["texcompiler"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "texcompiler",
+            "command": "/usr/local/bin/texcompiler",
+            "args": ["%DOCFILE%.tex"]
+        }
+    ],
+    // Automatic LaTeX compilation with the LaTeX Workshop extension using its own commands
+    // "latex-workshop.latex.outDir": ".build",
+    // "latex-workshop.latex.tools": [
+    //   {
+    //     "name": "pdflatex",
+    //     "command": "pdflatex",
+    //     "args": [
+    //       "-output-directory=.build",
+    //       "-interaction=nonstopmode",
+    //       "-synctex=1",
+    //       "%DOC%"
+    //     ]
+    //   },
+    //   {
+    //     "name": "move-pdf",
+    //     "command": "bash",
+    //     "args": ["-c", "mv .build/*.pdf ."]
+    //   }
+    // ],
+    // "latex-workshop.latex.recipes": [
+    //   {
+    //     "name": "pdflatex with pdf move",
+    //     "tools": ["pdflatex", "move-pdf"]
+    //   }
+    // ],
+
+    // Markdown
+    "markdown-preview-github-styles.darkTheme": "dark_tritanopia",
+    
+    // Shell script
+    "shellformat.flag": "-ln 0"
+}
