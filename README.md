@@ -1,4 +1,9 @@
-# 🌐 My Dotfiles
+![dotfiles-logo](https://github.com/theo-coder/dotfiles/assets/57922624/79b4f139-c937-46fd-87df-4192206d173f)
+
+<p align="center">
+    <a href="https://github.com/Elouan1411/dotfiles/commits/main"><img align="center" src="https://img.shields.io/github/last-commit/Elouan1411/dotfiles"/></a>
+    <a href="https://github.com/Elouan1411"><img align="center" src="https://img.shields.io/badge/author-Elouan1411-blue"/></a>
+</p>
 
 This repository contains my personal dotfiles for configuring my development environment.
 
@@ -20,4 +25,3 @@ dotfiles/
 ├── vscode/       # VSCode configuration (settings.json)
 └── tmux/         # Tmux configuration (tmux.conf)
 ```
-
